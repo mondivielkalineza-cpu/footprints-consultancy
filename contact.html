@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footprints Consultancy | Contact</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- AOS for scroll animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome for icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo3.png" alt="Footprints Consultancy logo"></a>
+    </div>
+     <div class="header-brand">FOOTPRINTS CONSULTANCY</br>Relationship | Collaboration | Commitment | Excellence.</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section containing contact info and form -->
+  <header class="hero" style="background-image: url('images/contact.jpeg');">
+    <div class="hero-content">
+      <div class="contact-wrapper" data-aos="fade-up">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p><i class="fas fa-map-marker-alt"></i> Apartment No. 01 (opposite Eagle Residence)<br>
+            Marmo Street | Haile Selassie Road<br>
+            Masaki – Kinondoni District<br>
+            Dar es Salaam, Tanzania
+          </p>
+          <p><i class="fas fa-phone"></i> <strong>Office:</strong> +255 755 040 450</p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/255785896524" style="color: inherit;">0785 896 524</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@footprints.co.tz" style="color: inherit;">info@footprints.co.tz</a></p>
+        </div>
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will respond shortly.');">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject">
+            <textarea rows="5" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-outline">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Map section -->
+
+  <!-- Minimal footer bar -->
+  <footer>
+    <div class="footer-bar">
+    <div class="footer-brand">Footprint Consultancy</div>
+      
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-follow"><span class="follow-label">Follow Us:</span>
+        <a href="https://www.instagram.com/footprintsconsultancy" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/footprintsconsultancy" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/footprintsconsult" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/footprints-consultancy" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2026 Footprint Consultancy. All rights reserved.</div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>

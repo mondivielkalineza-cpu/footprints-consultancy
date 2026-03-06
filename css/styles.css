@@ -1,0 +1,584 @@
+/*
+  Global stylesheet for the Footprints Consultancy multi‑page website.
+  This file defines a consistent look and feel across all pages using
+  a formal Times New Roman font, clean layouts and subtle animations.
+*/
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+/* Define a natural colour palette for the site */
+:root {
+  /* Woodland footprint palette */
+  /* Olive green for primary buttons and highlights */
+  --primary-color: #4B8B3B;
+  /* Deep brown used for headings and body text */
+  --secondary-color: #8B4513;
+  /* Taupe for subtle accents and hover states */
+  --accent-color: #C2B280;
+  /* Light beige background used across sections and cards */
+  --light-color: #F7F4E8;
+  /* Darker text colour for contrast */
+  --text-color: #3A2F2F;
+}
+
+/* Navigation bar */
+/* Navigation bar */
+/*
+  Navigation bar
+
+  The navigation sits on top of the hero image and is intentionally
+  compact so that the hero image fills the viewport. A semi‑transparent
+  dark background and blur effect are applied to allow the hero
+  background to show through while keeping the links legible.
+*/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* Smaller vertical padding keeps the header height minimal */
+  padding: -1rem,0rem;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.header-brand {
+  font-size: 15px;
+  display: inline; 
+  align-items: center;
+  gap: 0px;
+  margin-left: -425px;
+  margin-top: -10px;
+  color: #FFFFFF;
+  font-weight: bold;
+  
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  /* Slightly reduce font size to allow all links to fit */
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Logo inside navigation */
+nav .logo {
+  display: flex;
+  align-items: stretch;
+  
+}
+nav .logo img {
+  /* Increase logo size for better visibility; allow width to auto scale */
+  height: auto;
+  width: 150px;
+  margin-left: -140px;
+}
+
+/* Hero sections */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  min-height: 95vh;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradient overlay blending the primary olive and secondary brown colours */
+  background: linear-gradient(rgba(75, 139, 59, 0.6), rgba(139, 69, 19, 0.6));
+  z-index: 0;
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-primary {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background: #38672A;
+}
+
+/* Outline button in hero and forms (light border with accent colour) */
+.btn-outline {
+  border: 2px solid var(--accent-color);
+  color: #ffffff;
+}
+.btn-outline:hover {
+  background: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+/* Zoom animation used for hero backgrounds */
+@keyframes zoomInOut {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* Footer bar styles */
+footer {
+  margin-top: 0;
+  padding: -1rem 0rem;
+}
+.footer-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary-color);
+  color: #ffffff;
+  padding: -1rem 0rem;
+  font-size: 0.9rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.footer-nav a:hover {
+  color: var(--accent-color);
+}
+.social-icons a {
+  color: #ffffff;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--accent-color);
+}
+
+/* About section */
+.about-section {
+  padding: 4rem 1rem;
+  background: var(--light-color);
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-text {
+  flex: 1 1 450px;
+  /* Use a darker text colour for better contrast on light backgrounds */
+  color: var(--text-color);
+}
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.mission-vision > div {
+  flex: 1 1 250px;
+}
+.mission-vision i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+.mission-vision p {
+  color: var(--text-color);
+}
+.mission-vision h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+.values {
+  margin-top: 2rem;
+}
+.values ul {
+  list-style: none;
+  padding: 0;
+}
+.values li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+.about-image {
+  flex: 1 1 400px;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Contact page layout */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+.contact-info {
+  flex: 1 1 350px;
+}
+.contact-info h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.contact-info p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.contact-info i {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
+.contact-form {
+  flex: 1 1 350px;
+}
+.contact-form h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+.contact-form form textarea {
+  resize: vertical;
+}
+.contact-form form button {
+  align-self: flex-start;
+}
+
+.map-section img {
+  width: 100%;
+  display: block;
+}
+
+/* Section styling */
+section {
+  padding: 4rem 1rem;
+}
+.section-title {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Services grid */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.service-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+  max-width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.service-card h4 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+/* Training grid */
+.training-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.training-item {
+  background: #F2F2F2;
+  padding: 1.5rem;
+  border-radius: 6px;
+  flex: 1 1 250px;
+  max-width: 350px;
+}
+.training-item h5 {
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  font-size: 1.25rem;
+}
+
+/* Team grid */
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 80px;
+}
+.team-member {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  flex: 1 1 250px;
+  max-width: 350px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.team-member h6 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+.team-member p {
+  font-size: 0.9rem;
+}
+
+/* CTA section */
+.cta {
+  background: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.cta h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta p {
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  background: var(--secondary-color);
+  color: #F7F5F2;
+  padding: 8px 0;
+  line-height: 1.2;
+}
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-column {
+  flex: 1 1 200px;
+}
+.footer-column h4 {
+  margin-bottom: 1rem;
+  color: #F7F5F2;
+  font-size: 1.2rem;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+.footer-column a {
+  color: #F7F5F2;
+  text-decoration: none;
+}
+.footer-column a:hover {
+  color: var(--accent-color);
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #DDD1C0;
+}
+
+/* Slider for mission, vision and core values */
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.slide {
+  display: none;
+  padding: 2rem;
+  background: var(--light-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.slide.active {
+  display: block;
+}
+.slide h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+.slider-controls {
+  margin-top: 1rem;
+  text-align: center;
+}
+.slider-controls button {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+.slider-controls button:hover {
+  background: #38672A;
+}
+/* Hero buttons container for call-to-action buttons in headers */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.hero-buttons .btn {
+  margin: 0;
+}
+
+/* Compact footer bar and related classes */
+.footer-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary-color);
+  color: #ffffff;
+  /* Match the height and padding of the header for a balanced look */
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+}
+.footer-brand {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.social-follow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.social-follow a {
+  color: #ffffff;
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+.social-follow a:hover {
+  color: var(--accent-color);
+}
+.follow-label {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+.footer-copy {
+  background: var(--secondary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+/* Hide the footer logo since we display brand text instead */
+.footer-logo {
+  display: none;
+}
